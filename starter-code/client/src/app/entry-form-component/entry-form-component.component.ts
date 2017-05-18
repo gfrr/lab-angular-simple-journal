@@ -27,7 +27,7 @@ export class EntryFormComponentComponent implements OnInit {
     console.log(title, content);
     this.api.createEntry({title: title, content: content})
     .subscribe(()=>{
-      console.log("entry created");
+      this.router.navigate(['']);
     });
 
   }
